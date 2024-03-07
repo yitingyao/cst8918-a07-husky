@@ -22,11 +22,22 @@ As a first step in the pipline, you will use Husky to create a pre-commit hook t
 1. Initialize the _node_ project folder with `npm init -y`
 2. Install Husky with `npm install husky --save-dev`
 3. Initialize Husky with `npx husky-init`
-4. Create a pre-commit hook that runs the `terraform fmt` command.
+4. Update the pre-commit hook to run the `terraform fmt` command.
 
 ```sh
 echo "terraform fmt -check -recursive" > .husky/pre-commit
+```
+
+5. Update the pre-commit hook to run the `terraform validate` command.
+
+```sh
 echo "terraform validate" >> .husky/pre-commit
+```
+
+6. Update the pre-commit hook to run the `terraform tflint` command.
+
+```sh
+echo "tflint" >> .husky/pre-commit
 ```
 
 #### Test the pre-commit hook
