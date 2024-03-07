@@ -109,10 +109,6 @@ Then correct the error(s) and commit the changes and push to your branch with th
 
 It is time to Google and find a GitHub Actions job that will validate the Terraform script. Add this job to the `action-terraform-verify.yml` file.
 
-### Bonus (worth an extra 2 points)
-
-Add a GitHub Actions job that will run the `terraform plan` command.
-
 ## Submission
 
 Submit the URL of your GitHub repository.
