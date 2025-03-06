@@ -1,5 +1,5 @@
-CST8918 - DevOps: Infrastructure as Code
-Prof: Robert McKenney
+CST8918 - DevOps: Infrastructure as Code  
+Prof: Robert McKenney  
 
 # Hybrid-H09 Azure Kubernetes Service (AKS) Cluster with Terraform
 
@@ -36,7 +36,7 @@ output "kube_config" {
 
 ### Use the output of the Terraform script to connect to the AKS cluster using the `kubectl` command.
 
-Save the output of the Terraform script to a file called `kubeconfig` and use the following command to connect to the AKS cluster:
+Save the output of the Terraform script to a file called `kubeconfig` and then set the KUBCONFIG environment variable to point to that file. It will be used as context for `kubectl` commands to connect with the AKS cluster:
 
 ```sh
 echo "$(terraform output kube_config)" > ./kubeconfig
@@ -48,7 +48,7 @@ Check the file to make sure it contains the kubeconfig data:
 cat ./kubeconfig
 ```
 
-If the file begins with <<<eof and ends with eof, then you will need to edit the file and remove the <<<eof and eof lines.
+If the file begins with **<<<eof** and ends with **eof**, then you will need to edit the file and remove the `<<<eof` and `eof` lines.
 
 Then use the following command to connect to the AKS cluster:
 
@@ -330,9 +330,9 @@ Use the external IP address of the `store-front` service to access the applicati
 
 ## Submit
 
-Your github repository for this assignment should be named `cst8918-w24-h09`.
+Your github repository for this assignment should be named `cst8918-w25-h09`.
 
-When you have completed the assignment, submit the URL of your GitHub repository in the asignmnet folder on Brightspace.
+When you have completed the assignment, submit the URL of your GitHub repository in the assignment folder on Brightspace.
 
 ## Clean up resources
 
