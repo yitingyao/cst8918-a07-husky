@@ -1,0 +1,4 @@
+#!/usr/bin/env bash
+terraform fmt -check -recursive
+terraform validate
+tflint
